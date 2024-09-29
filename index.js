@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/", authRoutes);
 app.use("/movies",authoriseUser,moviesRoutes);
 
-mongoose.connect("mongodb://localhost:27017/STEP").then(() => {
+mongoose.connect("mongodb://mongodb:27017/STEP").then(() => {
   console.log("Database Connected");
 
   app.listen(process.env.PORT, () => {
